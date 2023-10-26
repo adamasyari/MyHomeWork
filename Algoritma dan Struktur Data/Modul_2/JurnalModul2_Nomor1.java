@@ -3,6 +3,7 @@ package Modul_2;
 class Node {
     Node next;
     public Object name;
+    public String elemen;
     Node(Object name){
         this.name = name;
     }

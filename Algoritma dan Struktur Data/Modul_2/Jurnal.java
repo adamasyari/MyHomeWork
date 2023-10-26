@@ -38,7 +38,7 @@ public class Jurnal {
             }
         }
         System.out.println("Notasi Prefix : " + temp.top.elemen);
-        }
+    }
     public static void main(String[] args) {
         Stack operator = new Stack();
         Stack operand = new Stack();

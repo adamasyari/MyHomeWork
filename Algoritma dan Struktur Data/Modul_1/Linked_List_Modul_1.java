@@ -157,7 +157,7 @@ class Modul_1{
     public boolean cek(){
         return ((head == null) && (tail == null));
     }
-    public void margerlist(Modul_1 m2, Modul_1 m1) {
+    static void margerlist(Modul_1 m2, Modul_1 m1) {
         m1.tail.next = m2.head;
         m2.head.prev = m1.tail;
     }
