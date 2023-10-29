@@ -5,7 +5,7 @@ class Node{
     Node next, prev;
     String namaBarang;
     int harga, stok;
-    public int data;
+    
     Node(String namaBarang, int harga, int stok){
         this.namaBarang = namaBarang;
         this.harga = harga;
