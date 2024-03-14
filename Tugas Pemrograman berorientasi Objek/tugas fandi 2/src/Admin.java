@@ -3,7 +3,6 @@ public class Admin {
     String adminUsername;
     String adminPassword;
     Student student;
-    String[] userStudent;
     
     public void displayStudent() {
         for (String student : userStudent) {

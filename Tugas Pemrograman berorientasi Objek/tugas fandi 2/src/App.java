@@ -4,10 +4,12 @@ public class App {
         App app = new App();
         app.menu();
     }
+
     String[] bookList;
-    
+    String[] userStudent;
     Admin admin = new Admin();
     Student student = new Student();
+    
     public void menu(){
         Scanner inputMenu = new Scanner(System.in);
 
