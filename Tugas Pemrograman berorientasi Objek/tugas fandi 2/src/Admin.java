@@ -8,13 +8,12 @@ public class Admin {
         for (String student : userStudent) {
             System.out.println("Nama: " + student.name);
             System.out.println("NIM: " + student.faculty);
-            System.out.println("Jurusan: " + student.programStudi);
-            System.out.println();
+            System.out.println("Jurusan: " + student.programStudi + "\n");
         }
     }
     public void addStudent(){
-        Student student = new Student();
         Scanner input = new Scanner(System.in);
+        
         System.out.println("Masukkan nama mahasiswa: ");
         student.name = input.nextLine();
         System.out.println("Masuukan Fakultas mahasiswa");
