@@ -17,12 +17,13 @@ public class App {
         System.out.println("3. Exit");
         
         System.err.print("Choose option (1-3): ");
-        String option = input.nextLine();
+        Scanner inputMenu = new Scanner(System.in);
+        String option = inputMenu.nextLine();
 
         switch (option) {
             case "1":
-                System.out.print("Enter your NIM (input 99 untuk back): ");
-                String nim = input.nextLine();
+                System.out.print("Enter your NIM (inputMenu 99 untuk back): ");
+                String nim = inputMenu.nextLine();
                 if(nim.equals(student.getNim())){
                     menuStudent();
                 } else if(nim.equals("99")){
@@ -33,9 +34,9 @@ public class App {
                 break;
             case "2":
                 System.out.print("Enter your username (admin) : ");
-                admin.adminUsername = input.nextLine();
+                admin.adminUsername = inputMenu.nextLine();
                 System.out.print("Enter your password (admin) : ");
-                admin.adminPassword = input.nextLine();
+                admin.adminPassword = inputMenu.nextLine();
                 if(admin.adminUsername.equals("admin") && admin.adminPassword.equals("admin")) {
                     menuAdmin();
                 } else {
@@ -49,12 +50,12 @@ public class App {
                 System.out.println("Invalid option, please choose again.");
                 break;
         }
-        input.close();
+        inputMenu.close();
     }
     public void menuAdmin(){
         System.out.println("==== Admin Menu =====");
         System.out.println("1. Add Student");
-        System.out.println("Display Registered Student");
+        System.out.println("2. Display Registered Student");
         System.out.println("3. Logout");
 
         System.out.print("Choose option (1-3): ");

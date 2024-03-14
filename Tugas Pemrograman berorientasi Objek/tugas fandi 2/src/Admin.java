@@ -6,6 +6,7 @@ public class Admin {
     Student[] userStudent;
     
     public void displayStudent() {
+        App app = new App();
         StringBuilder result = new StringBuilder();
         for (Student student : userStudent) { 
             result.append("\nNama: ").append(student.getName())
@@ -14,18 +15,20 @@ public class Admin {
             .append("\nJurusan: ").append(student.getProgramStudi())
             .append("\n");
         }
+        app.menuAdmin();
         System.out.println(result.toString());
     }
     public void addStudent() {
+        App app = new App();
         Scanner input = new Scanner(System.in);
         
-        System.out.println("Masukkan nama mahasiswa: ");
+        System.out.print("Masukkan nama mahasiswa: ");
         String name = input.nextLine();
-        System.out.println("Masukkan Fakultas mahasiswa");
+        System.out.print("Masukkan Fakultas mahasiswa: ");
         String faculty = input.nextLine();
-        System.out.println("Masukkan NIM mahasiswa: ");
+        System.out.print("Masukkan NIM mahasiswa: ");
         String nim = input.nextLine();
-        System.out.println("Masukkan Jurusan mahasiswa: ");
+        System.out.print("Masukkan Jurusan mahasiswa: ");
         String programStudi = input.nextLine();
 
         // Membuat objek Student baru
@@ -34,6 +37,7 @@ public class Admin {
         // Menambahkan objek Student baru ke dalam array userStudent
         addStudentToList(newStudent);
         System.out.println("Data mahasiswa berhasil ditambahkan.");
+        app.menuAdmin();
         input.close();
     }
     private void addStudentToList(Student newStudent) {
